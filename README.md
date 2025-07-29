@@ -17,7 +17,5 @@ A **Role-Based Access Control (RBAC)** system for a school portal built with **N
 - **cookie-parser**
 - **bcrypt**
 
----
 
-## 🧱 Folder Structure
 
