@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, <%= user.username %>!</h2>
+    <p>Your role: <%= user.role %></p>
+
+    <% if (user.role === 'principal') { %>
+        <a href="/user/principal">Principal Panel</a><br>
+    <% } %>
+
+    <% if (user.role === 'principal' || user.role === 'teacher') { %>
+        <a href="/user/teacher">Teacher Panel</a><br>
+    <% } %>
+
+    <a href="/user/student">Student Panel</a><br>
+
+    <form action="/auth/logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

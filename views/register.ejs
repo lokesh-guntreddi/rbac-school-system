@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Portal – Register</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1588072432836-e10032774350') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 40px 30px;
+      max-width: 420px;
+      width: 90%;
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #e0e0e0;
+    }
+
+    select {
+      color: #fff;
+    }
+
+    select option {
+      color: #000;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00c6ff;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0077b6;
+    }
+
+    .login-link {
+      text-align: center;
+      display: block;
+      margin-top: 15px;
+      color: #cceaff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .login-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .glass-card {
+        padding: 30px 20px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-card">
+    <h2>School Portal Registration</h2>
+    <form action="/auth/register" method="POST">
+      <input type="text" name="username" placeholder="Full Name" required />
+      <input type="password" name="password" placeholder="Create Password" required />
+      <select name="role" required>
+        <option value="">Select Role</option>
+        <option value="student">🎓 Student</option>
+        <option value="teacher">👨‍🏫 Teacher</option>
+        <option value="principal">🏫 Principal</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+    <a class="login-link" href="/auth/login">Already registered? Log in here</a>
+  </div>
+</body>
+</html>

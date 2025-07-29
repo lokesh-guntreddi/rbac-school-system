@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Portal – Home</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1588072432836-e10032774350') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 50px 40px;
+      max-width: 480px;
+      width: 90%;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn-group a {
+      display: block;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 8px;
+      background-color: #00c6ff;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn-group a:hover {
+      background-color: #0077b6;
+    }
+
+    @media (max-width: 500px) {
+      .glass-card {
+        padding: 30px 25px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-card">
+    <h1>Welcome to the School Portal</h1>
+    <p>Please choose an option below to continue.</p>
+    <div class="btn-group">
+      <a href="/auth/login">🔐 Login</a>
+      <a href="/auth/register">📝 Register</a>
+    </div>
+  </div>
+</body>
+</html>

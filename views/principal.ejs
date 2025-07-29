@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Principal Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background-color: #1f3b58;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #fff;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+    }
+    .sidebar h3 {
+      font-size: 16px;
+      color: #888;
+      margin-bottom: 15px;
+    }
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      background-color: #eef3f7;
+      color: #333;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: 0.2s ease;
+    }
+    .sidebar a:hover {
+      background-color: #dbe5ef;
+    }
+    .main {
+      flex: 1;
+      padding: 20px 40px;
+    }
+    .welcome {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .subtext {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .cards {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      flex: 1;
+      min-width: 220px;
+    }
+    .card h4 {
+      font-size: 18px;
+      margin: 0 0 10px 0;
+      color: #1f3b58;
+    }
+    .card p {
+      font-size: 28px;
+      margin: 0;
+      font-weight: bold;
+      color: #0077b6;
+    }
+    .info-section {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+    .info-section h3 {
+      font-size: 18px;
+      color: #1f3b58;
+      margin-bottom: 15px;
+    }
+    .info-section p {
+      line-height: 1.6;
+      font-size: 15px;
+      color: #444;
+    }
+    .confidential {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    .confidential h4 {
+      margin: 0 0 10px 0;
+      color: #856404;
+    }
+    .confidential p {
+      margin: 0;
+      font-size: 14px;
+      color: #5a4d02;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table th, table td {
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    table th {
+      background-color: #ecf0f1;
+    }
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+      .main { padding: 20px; }
+      .cards { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Principal Dashboard
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Navigation</h3>
+      <a href="/user/teacher">View All Teachers</a>
+      <a href="/user/student">View All Students</a>
+    </div>
+
+    <div class="main">
+      <div class="welcome">Welcome, Principal</div>
+      <div class="subtext">Here’s a summary of your school management tools.</div>
+
+      <div class="cards">
+        <div class="card">
+          <h4>Total Teachers</h4>
+          <p>24</p>
+        </div>
+        <div class="card">
+          <h4>Total Students</h4>
+          <p>350</p>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h3>About Your Role</h3>
+        <p>
+          As the Principal, you are responsible for leading academic planning, managing faculty and students, ensuring school compliance, and maintaining the overall quality of education. 
+          You can access teacher and student lists to stay updated and address any academic needs or concerns.
+        </p>
+      </div>
+
+      <div class="confidential">
+        <h4>Confidential: Internal Notices</h4>
+        <p>
+          Only visible to the Principal. Please review the latest staff performance evaluations and budget adjustments.
+        </p>
+      </div>
+
+      <div class="info-section">
+        <h3>Staff Evaluation Reports</h3>
+        <p>Annual performance reviews for selected staff members:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Teacher Name</th>
+              <th>Subject</th>
+              <th>Performance</th>
+              <th>Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mrs. Anjali Rao</td>
+              <td>Math</td>
+              <td>Excellent</td>
+              <td>High student satisfaction & consistent results.</td>
+            </tr>
+            <tr>
+              <td>Mr. Naveen Verma</td>
+              <td>Science</td>
+              <td>Good</td>
+              <td>Needs slight improvement in engagement.</td>
+            </tr>
+            <tr>
+              <td>Ms. Ritu Sharma</td>
+              <td>English</td>
+              <td>Outstanding</td>
+              <td>Leads language club; consistent top performance.</td>
+            </tr>
+            <tr>
+              <td>Mr. Sanjay Pillai</td>
+              <td>History</td>
+              <td>Average</td>
+              <td>Pending training on new curriculum.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-section">
+        <h3>Finance & Budget Overview</h3>
+        <p>Summary of departmental budgets for this academic year:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Department</th>
+              <th>Allocated Budget</th>
+              <th>Used</th>
+              <th>Remaining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Science Lab</td>
+              <td>$20,000</td>
+              <td>$15,500</td>
+              <td>$4,500</td>
+            </tr>
+            <tr>
+              <td>Library</td>
+              <td>$12,000</td>
+              <td>$9,000</td>
+              <td>$3,000</td>
+            </tr>
+            <tr>
+              <td>Sports</td>
+              <td>$18,000</td>
+              <td>$12,700</td>
+              <td>$5,300</td>
+            </tr>
+            <tr>
+              <td>Maintenance</td>
+              <td>$25,000</td>
+              <td>$21,300</td>
+              <td>$3,700</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
